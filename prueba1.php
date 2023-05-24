@@ -83,6 +83,7 @@
 
 </div>
 
+<<<<<<< HEAD
 <div class="d-grid gap-2">
         <button type="button" id="addItem" class="btn btn-primary btn-lg">addItem</button>
 </div>
@@ -90,5 +91,8 @@
 
 
  
+=======
+
+>>>>>>> refs/remotes/origin/main
 
 <?php include("php/footer.php") ?>
