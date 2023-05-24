@@ -46,38 +46,33 @@
                     <th scope="col">Acción</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="addItemtbody">
 
                 <tr>
+
                     <th scope="row">1</th>
+                    
                     <td>
                         <input required="" type="text" name="factura" class="input">
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label>#Nro factura</label></td>
+                    </td> 
+                    
                     <td>                        
                         <input required="" type="text" name="factura" class="input">
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label>#Nro factura</label>
                     </td>
+
                     <td>                       
                         <input required="" type="text" name="factura" class="input">
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label>#Nro factura</label>
                     </td>
+
                     <td>                       
                         <input required="" type="text" name="factura" class="input">
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label>#Nro factura</label>
                     </td>
+
                     <td>                       
                         <a name="" id="" class="btn btn-success" href="#" role="button">+</a>
-                        <a name="" id="" class="btn btn-danger" href="#" role="button">+</a>
-                        
+                        <a name="" id="" class="btn btn-danger" href="#" role="button">-</a>
                     </td>
+
                 </tr>
 
             </tbody>
@@ -85,8 +80,15 @@
         </table>
 
     </form>
+
 </div>
 
-</div>  
+<div class="d-grid gap-2">
+        <button type="button" id="addItem" class="btn btn-primary btn-lg">addItem</button>
+</div>
+
+
+
+ 
 
 <?php include("php/footer.php") ?>

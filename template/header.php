@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/boostrap/bootstrap.min.js" defer></script>
+    <script src="/js/app.js" defer></script>
     <title>Factura</title>
 </head>
 <body>
