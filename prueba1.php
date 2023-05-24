@@ -88,39 +88,22 @@
 
 </div>
 
-
-
- 
-<?php 
-
-   echo count($_POST);
-
-foreach($_POST['1'] as $iterador){
-
-    //echo $_POST['1'][0];
-
-}?>
-
-
-
-
-
-
 <?php include("php/footer.php") ?>
-
-
-
-
-
-
-
-
-
-
-
 
 <?php 
     include("../../db.php");
+
+
+    echo count($_POST);
+
+    foreach($_POST['1'] as $iterador){
+
+        
+
+    }
+
+
+
     if($_POST){
         print_r($_POST);
         $nombrepuesto=(isset($_POST['nombrepuesto'])?$_POST["nombrepuesto"]:"");
