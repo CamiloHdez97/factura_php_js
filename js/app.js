@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 document.querySelector("#addItem").addEventListener("click",(e)=>{
 
     let tbody = document.querySelector('#addItemtbody');
@@ -28,3 +29,11 @@ document.querySelector("#addItem").addEventListener("click",(e)=>{
     e.stopPropagation();
 
 })
+=======
+var myModal = document.querySelector('.mymodal')
+var myInput = document.querySelector('.boton')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+>>>>>>> refs/remotes/origin/main
