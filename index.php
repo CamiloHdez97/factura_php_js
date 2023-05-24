@@ -13,9 +13,6 @@
     
 
 
-
-
-
 <div class="group">
   <input required="" name="nombre" type="text" class="input">
   <span class="highlight"></span>
