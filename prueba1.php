@@ -74,7 +74,7 @@
                         <label>#Nro factura</label>
                     </td>
                     <td>                       
-                        <a name="" id="" class="btn btn-success" href="#" role="button">+</a>
+                        <a name="" id="add" class="btn btn-success" href="#" role="button">+</a>
                         <a name="" id="" class="btn btn-danger" href="#" role="button">+</a>
                         
                     </td>
@@ -84,9 +84,15 @@
 
         </table>
 
+
+
+        <
+
     </form>
 </div>
 
+<button type="button" class="btn"></button>
+<button class="btn btn-success">finalizar compra</button>
 
 
 <?php include("php/footer.php") ?>
