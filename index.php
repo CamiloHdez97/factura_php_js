@@ -57,27 +57,97 @@
   </div>
   <div class="card-footer">
   <span class="text-title">$19.980</span>
-  <div class="card-button     boton">
+  <div class="card-button     boton"   class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"     >
       
 
-  <div class="modal fade    mymodal " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
+
+
+       <!-- modal! -->
+
+  <div class="modal fade  mymodal " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered    modal-xl ">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">compra de articulo</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        
+           
+      
+
+<div class="myform">
+    <form  class="f" action="" method="post">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Valor Unidad</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <th scope="row">1</th>
+                    <td>
+                        <input required="" type="text" name="factura" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>#Nro factura</label></td>
+                    <td>                        
+                        <input required="" type="text" name="factura" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>#Nro factura</label>
+                    </td>
+                    <td>                       
+                        <input required="" type="text" name="factura" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>#Nro factura</label>
+                    </td>
+                    <td>                       
+                        <input required="" type="text" name="factura" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>#Nro factura</label>
+                    </td>
+                    <td>                       
+                        <a name="" id="" class="btn btn-success" href="#" role="button">+</a>
+                        <a name="" id="" class="btn btn-danger" href="#" role="button">+</a>
+                        
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+          
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Guardar cambios</button>
       </div>
     </div>
   </div>
 </div>
-
 
 
 
