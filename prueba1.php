@@ -50,22 +50,22 @@
 
                 <tr>
 
-                    <th scope="row">1</th>
+                    <th scope="row" id="1">1</th>
                     
                     <td>
-                        <input required="" type="text" name="factura" class="input">
+                        <input required="" type="text" name="1[]" class="input">
                     </td> 
                     
                     <td>                        
-                        <input required="" type="text" name="factura" class="input">
+                        <input required="" type="text" name="1[]" class="input">
                     </td>
 
                     <td>                       
-                        <input required="" type="text" name="factura" class="input">
+                        <input required="" type="text" name="1[]" class="input">
                     </td>
 
                     <td>                       
-                        <input required="" type="text" name="factura" class="input">
+                        <input required="" type="text" name="1[]" class="input">
                     </td>
 
                     <td>                       
@@ -79,20 +79,59 @@
 
         </table>
 
-    </form>
-
+        <div class="d-grid gap-2">
+        <button type="button" id="addItem" class="btn btn-primary btn-lg">addItem</button>
+        <button type="submit" id="addItem" class="btn btn-primary btn-lg">Facturar</button>
 </div>
 
-<<<<<<< HEAD
-<div class="d-grid gap-2">
-        <button type="button" id="addItem" class="btn btn-primary btn-lg">addItem</button>
+    </form>
+
 </div>
 
 
 
  
-=======
+<?php 
 
->>>>>>> refs/remotes/origin/main
+   echo count($_POST);
+
+foreach($_POST['1'] as $iterador){
+
+    //echo $_POST['1'][0];
+
+}?>
+
+
+
+
+
 
 <?php include("php/footer.php") ?>
+
+
+
+
+
+
+
+
+
+
+
+
+<?php 
+    include("../../db.php");
+    if($_POST){
+        print_r($_POST);
+        $nombrepuesto=(isset($_POST['nombrepuesto'])?$_POST["nombrepuesto"]:"");
+        
+        //Estructurar la sentencia
+        $sentencia=$conexion->prepare("INSERT INTO tbl_puestos(id,nombrepuesto)
+                                        VALUES (NULL,:nombrepuesto)");
+
+        //Asignando los valores remplazando la sentencia
+        $sentencia->bindParam(":nombrepuesto",$nombrepuesto);
+        $sentencia->execute();
+
+    }
+?>

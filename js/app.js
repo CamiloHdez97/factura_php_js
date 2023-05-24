@@ -1,21 +1,22 @@
+let num=2;
 document.querySelector("#addItem").addEventListener("click",(e)=>{
-
+    num=num++
     let tbody = document.querySelector('#addItemtbody');
     let tr = document.createElement('tr');
     tr.innerHTML = /* html */`
         <tr>
-            <th scope="row">1</th>   
+            <th scope="row" id="${num}">${num}</th>   
             <td>
-                <input required="" type="text" name="factura" class="input">
+                <input required="" type="text" name="${num}[]" class="input">
             </td>            
             <td>                        
-                <input required="" type="text" name="factura" class="input">
+                <input required="" type="text" name="${num}[]" class="input">
             </td>
             <td>                       
-                <input required="" type="text" name="factura" class="input">
+                <input required="" type="text" name="${num}[]" class="input">
             </td>
             <td>                       
-                <input required="" type="text" name="factura" class="input">
+                <input required="" type="text" name="${num}[]" class="input">
             </td>
             <td>                       
                 <a name="" id="" class="btn btn-success" href="#" role="button">+</a>

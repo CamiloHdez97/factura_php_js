@@ -12,11 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/boostrap/bootstrap.min.js" defer></script>
-<<<<<<< HEAD
     <script src="/js/app.js" defer></script>
-=======
-    <script src="js/app.js" defer></script>
->>>>>>> refs/remotes/origin/main
     <title>Factura</title>
 </head>
 <body>
