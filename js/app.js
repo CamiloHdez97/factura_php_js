@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 document.querySelector("#addItem").addEventListener("click",(e)=>{
 
     let tbody = document.querySelector('#addItemtbody');
-
-    tbody.innerHTML = /* html */`
+    let tr = document.createElement('tr');
+    tr.innerHTML = /* html */`
         <tr>
             <th scope="row">1</th>   
             <td>
@@ -24,16 +23,20 @@ document.querySelector("#addItem").addEventListener("click",(e)=>{
             </td>
         </tr>
     `;
-    
+
+    tbody.appendChild(tr);
+
+    console.log('entra');
     e.preventDefault();
     e.stopPropagation();
 
 })
-=======
-var myModal = document.querySelector('.mymodal')
-var myInput = document.querySelector('.boton')
 
-myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
-})
->>>>>>> refs/remotes/origin/main
+//var myModal = document.querySelector('.mymodal')
+//var myInput = document.querySelector('.boton')
+
+//myModal.addEventListener('shown.bs.modal', function () {
+//  myInput.focus()
+//})
+
+
