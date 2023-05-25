@@ -1,14 +1,7 @@
 <?php include("template/header.php") ?>
 
 <div class="myform">
-    <form  class="f" action="" method="post">
-
-        <div class="group">
-            <input required="" type="text" name="factura" class="input">
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>#Nro factura</label>
-        </div><br>
+    <form  class="f" method="GET">
             
         <div class="group">
             <input required="" name="nombre" type="text" class="input">
@@ -18,22 +11,24 @@
         </div><br>
 
         <div class="group">
+            <input required="" name="apellido" type="text" class="input">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>apellido</label>
+        </div><br>
+
+        <div class="group">
             <input required="" name="cc" type="text" class="input">
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>nro cc</label>
         </div><br>
-
-        <div class="group">
-            <input required="" name="fecha" type="date" class="input">
-        </div>
-
     </form>
 </div>
 
 
 <div class="myform">
-    <form  class="f" action="" method="post">
+    <form  class="f" method="POST">
 
         <table class="table">
             <thead>
@@ -88,33 +83,46 @@
 
 </div>
 
-<?php include("php/footer.php") ?>
+<?php include("template/footer.php") ?>
 
 <?php 
-    include("../../db.php");
 
-
-    echo count($_POST);
-
-    foreach($_POST['1'] as $iterador){
-
-        
-
-    }
-
-
+require("db.php");
 
     if($_POST){
-        print_r($_POST);
-        $nombrepuesto=(isset($_POST['nombrepuesto'])?$_POST["nombrepuesto"]:"");
-        
-        //Estructurar la sentencia
-        $sentencia=$conexion->prepare("INSERT INTO tbl_puestos(id,nombrepuesto)
-                                        VALUES (NULL,:nombrepuesto)");
 
-        //Asignando los valores remplazando la sentencia
-        $sentencia->bindParam(":nombrepuesto",$nombrepuesto);
-        $sentencia->execute();
+        $nombre = $_GET['nombre'];
+        $apellido = $_GET['apellido'];
+        $cc = $_GET['cc'];
 
+        $sentencia1=$conexion->prepare("INSERT INTO persona(cc,nombre,apellido)
+        VALUES (:cc, :nombre, :apellido)");
+                //Asignando los valores remplazando la sentencia
+        $sentencia1->bindParam(":cc", $cc);
+        $sentencia1->bindParam(":nombre",$nombre);
+        $sentencia1->bindParam(":apellido",$apellido);
+        $sentencia1->execute();
+     
+        foreach($_POST as $item){
+            
+            $subtotal = intval($item[1]) * intval($item[2]);
+            $iva = $subtotal * 0.19;
+            $total = $subtotal+$iva;
+            $item[3] = $total;
+            $fecha_actual = date("d-m-Y h:i:s");
+                                        
+            $nombrepuesto=(isset($_POST['nombrepuest'])?$_POST["nombrepuesto"]:"");
+            //Estructurar la sentencia
+            $sentencia=$conexion->prepare("INSERT INTO factura(id,producto,valor_unitario,cantidad,iva,total,fecha,cc)
+                                                     VALUES (NULL, :producto, :valor_unitario, :cantidad, :iva, :total, NULL , :cc)");
+            //Asignando los valores remplazando la sentencia
+            $sentencia->bindParam(":producto", $item[0]);
+            $sentencia->bindParam(":valor_unitario", $item[1]);
+            $sentencia->bindParam(":cantidad", $item[2]);
+            $sentencia->bindParam(":iva", $iva);
+            $sentencia->bindParam(":total", $item[3]);
+            $sentencia->bindParam(":cc",$cc);
+            $sentencia->execute();
+        }        
     }
 ?>
