@@ -1,5 +1,6 @@
 {
     "conventionalCommits.scopes": [
-        "diseño base"
+        "diseño base",
+        "nueva interfaz y reactividad con js"
     ]
 }

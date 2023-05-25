@@ -18,6 +18,9 @@
 <body>
 
 <nav class="nav justify-content-center">
+
+<div class="loader"></div>
+
   <a class="nav-link active" href="#" aria-current="page">Principal</a>
   <a class="nav-link" href="#">Compras</a>
   <a class="nav-link disabled" href="#">Resumenes de compra</a>
