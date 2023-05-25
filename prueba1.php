@@ -91,17 +91,17 @@ require("db.php");
 
     if($_POST){
 
-        $nombre = $_GET['nombre'];
-        $apellido = $_GET['apellido'];
-        $cc = $_GET['cc'];
+        //$nombre = $_GET['nombre'];
+        //$apellido = $_GET['apellido'];
+        //$cc = $_GET['cc'];
 
-        $sentencia1=$conexion->prepare("INSERT INTO persona(cc,nombre,apellido)
-        VALUES (:cc, :nombre, :apellido)");
-                //Asignando los valores remplazando la sentencia
-        $sentencia1->bindParam(":cc", $cc);
-        $sentencia1->bindParam(":nombre",$nombre);
-        $sentencia1->bindParam(":apellido",$apellido);
-        $sentencia1->execute();
+        //$sentencia1=$conexion->prepare("INSERT INTO persona(cc,nombre,apellido)
+        //VALUES (:cc, :nombre, :apellido)");
+        //        //Asignando los valores remplazando la sentencia
+        //$sentencia1->bindParam(":cc", $cc);
+        //$sentencia1->bindParam(":nombre",$nombre);
+        //$sentencia1->bindParam(":apellido",$apellido);
+        //$sentencia1->execute();
      
         foreach($_POST as $item){
             

@@ -2,8 +2,8 @@
 
     $server="localhost";//127.0.0.1
     $db="facturacion";
-    $user="root";
-    $passwd="uts123";
+    $user="campus";
+    $passwd="campus2023";
     try{
         $conexion = new PDO("mysql:host=$server;dbname=$db",$user,$passwd);
     }
@@ -37,12 +37,9 @@ CREATE TABLE `factura` (
 DELIMITER //
 CREATE TRIGGER before_insert_factura
 CREATE INSERT ON factura
-
 FOR EACH ROW
 BEGIN 
 	SET NEW.fecha = CURDATE();
 END//
-
 DELIMITER; 
-
 -->
